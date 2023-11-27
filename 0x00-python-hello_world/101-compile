@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Compiling you python code ...."
+
+# Extract the filename without the extension
+BASENAME=$(basename "$PYFILE" .py)
+
+# Specify the name for the compiled file
+COMPILED_FILE="$BASENAME.pyc"
+
+python3 -c "import py_compile; py_compile.compile('$PYFILE', cfile='$COMPILED_FILE')"
