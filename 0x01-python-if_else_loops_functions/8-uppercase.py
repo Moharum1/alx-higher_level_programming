@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import string
+
+
 def uppercase(str):
     newStr = ""
     for char in str:
@@ -8,4 +10,4 @@ def uppercase(str):
         else:
             newStr += char
 
-    print(newStr)
+    print("{}".format(newStr))
