@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-import string
-for i in string.ascii_letters:
-    print(f'{i}',end="")
+for char in range(ord('a'), ord('z') + 1):
+    print(chr(char), end='')
