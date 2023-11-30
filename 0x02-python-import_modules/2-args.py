@@ -11,10 +11,10 @@ if __name__ == "__main__":
         print("{} argument:".format(len(arg)))
 
         for i, cont in enumerate(arg):
-            print("{} : {}".format(i + 1, cont))
+            print("{}: {}".format(i + 1, cont))
     else:
         arg.pop(0)
         print("{} arguments:".format(len(arg)))
 
         for i, cont in enumerate(arg):
-            print("{} : {}".format(i + 1, cont))
+            print("{}: {}".format(i + 1, cont))
