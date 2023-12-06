@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    newMat = []
-    rowPos = 0
-    for row in matrix:
-        newMat.append([])
-        for item in row:
-            newMat[rowPos].append(item ** 2)
-        rowPos += 1
+    newMat = matrix.copy()
+
+    for i,row in enumerate(matrix):
+        newMat[i] = list(map(lambda x: x**2, row))
+
     return newMat
