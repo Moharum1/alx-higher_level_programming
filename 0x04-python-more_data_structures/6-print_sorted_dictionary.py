@@ -4,6 +4,3 @@ def print_sorted_dictionary(a_dictionary):
     newDict = {i : a_dictionary[i] for i in keys}
     for key,value in newDict.items():
         print("{}: {}".format(key,value))
-
-a_dictionary = { 'language': "C", 'Number': 89, 'track': "Low level", 'ids': [1, 2, 3] }
-print_sorted_dictionary(a_dictionary)
