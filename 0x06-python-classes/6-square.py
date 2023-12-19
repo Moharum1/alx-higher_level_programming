@@ -9,13 +9,14 @@ class Square:
     Attributes:
         size: size of a square (1 side).
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0, pos=(0, 0)):
         """
         Creates new instances of square (1 side).
         Args:
             size: size of the square.
         """
         self.__size = size
+        self.__position = pos
 
     @property
     def size(self):
@@ -37,6 +38,29 @@ class Square:
         else:
             self.__size = value
 
+    @property
+    def position(self):
+        """Return the position of a square"""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """Setter for the size
+
+        Args :
+           value (int) : a pair of type (int * int)
+
+        """
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
     def area(self):
         """
         Calculate th area of the square
@@ -51,4 +75,8 @@ class Square:
             print()
 
         for row in range(0, self.__size):
+            for i in range(0, self.position[1]):
+                print()
+            for pos in range(0, self.position[0]):
+                print(" ", end="")
             print("#" * (self.__size))
