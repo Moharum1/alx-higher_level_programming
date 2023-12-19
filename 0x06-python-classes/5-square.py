@@ -47,7 +47,8 @@ class Square:
         """
         print a square of a certin size
         """
+        if self.__size == 0:
+            print()
+
         for colum in range(0, self.__size):
-            for row in range(0, self.__size):
-                print("{}".format("#"), end="")
-            print("")
+            print("#" * (self.__size))
