@@ -36,7 +36,7 @@ class Rectangle:
             A setter for the width property Which
 
             Args:
-                num (int): width of the rectangle            
+                num (int): width of the rectangle
             Raise:
                 TypeError: if the input isn't number
                 ValueError: if the input is less than 0
@@ -64,7 +64,7 @@ class Rectangle:
             A setter for the Height property Which
 
             Args:
-                num (int): height of the rectangle            
+                num (int): height of the rectangle
             Raise:
                 TypeError: if the input isn't number
                 ValueError: if the input is less than 0
