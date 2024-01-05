@@ -4,7 +4,7 @@
 
 class LockedClass:
     """
-        LockedClass does nothing 
+        LockedClass does nothing
     """
 
     __slots__ = ["first_name"]
