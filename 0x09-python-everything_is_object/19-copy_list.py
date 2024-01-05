@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def copy_list(l):
+def copy_list(list_):
     """
         A function used to copy a list
 
@@ -10,5 +10,4 @@ def copy_list(l):
         Return:
             list: a copy of original list
     """
-    new_list = l[:]
-    return new_list
+    return list_[:]
