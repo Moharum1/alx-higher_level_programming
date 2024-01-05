@@ -3,9 +3,6 @@
 
 
 class Rectangle:
-    # a Class type variable to detect number of instances
-    number_of_instances = 0
-
     """
         Class that define the basic properties of a Rectangle
 
@@ -24,6 +21,8 @@ class Rectangle:
         self.height = height
 
         Rectangle.number_of_instances += 1
+
+    number_of_instances = 0
 
     def __str__(self):
         """
