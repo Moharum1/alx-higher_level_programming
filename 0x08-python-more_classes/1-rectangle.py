@@ -6,7 +6,7 @@ class Rectangle:
     """
         Class that define the basic properties of a Rectangle
 
-        Arguments :
+        Args :
             width (int) : width of the square
             height (int) : height of the square
     """
@@ -24,6 +24,9 @@ class Rectangle:
     def width(self):
         """
             A getter for the width property
+
+            Return:
+                int: width of the rectangle
         """
         return self.__width
 
@@ -31,10 +34,12 @@ class Rectangle:
     def width(self, num):
         """
             A setter for the width property Which
-            
-                Raise TypeError if the input isn't number
-                Raise ValueError if the input is less than 0
-                Other wise set the private variable to the num
+
+            Args:
+                num (int): width of the rectangle            
+            Raise:
+                TypeError: if the input isn't number
+                ValueError: if the input is less than 0
         """
         if not isinstance(num, int):
             raise TypeError("width must be an integer")
@@ -47,6 +52,9 @@ class Rectangle:
     def height(self):
         """
             A getter for the height property
+
+            Return:
+                int: width of the rectangle
         """
         return self.__height
 
@@ -54,10 +62,12 @@ class Rectangle:
     def height(self, num):
         """
             A setter for the Height property Which
-            
-                Raise TypeError if the input isn't number
-                Raise ValueError if the input is less than 0
-                Other wise set the private variable to the num
+
+            Args:
+                num (int): height of the rectangle            
+            Raise:
+                TypeError: if the input isn't number
+                ValueError: if the input is less than 0
         """
         if not isinstance(num, int):
             raise TypeError("height must be an integer")
