@@ -25,7 +25,17 @@ Numbers:
    Traceback (most recent call last):
    TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
+:: with only 1 argument
+   >>> bg.integer_validator("numbers")
+   Traceback (most recent call last):
+   TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
 :: with infinite integer
    >>> bg.integer_validator("infnumber", int('inf'))
    Traceback (most recent call last):
    ValueError: invalid literal for int() with base 10: 'inf'
+
+:: with string input
+   >>> bg.integer_validator("infnumber", "Hello")
+   Traceback (most recent call last):
+   TypeError: infnumber must be an integer
