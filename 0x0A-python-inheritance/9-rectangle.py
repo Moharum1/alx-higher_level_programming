@@ -38,6 +38,15 @@ class Rectangle(BaseGeometry):
             height: height of rectangle
         """
         self.__width = width
-        super().integer_validator("width", self.__width)
         self.__height = height
+
+        super().integer_validator("width", self.__width)
         super().integer_validator("height", self.__height)
+
+    def area(self):
+        """A method to calculate the area of triangle"""
+        return self.__width * self.__height
+
+    def __str__(self):
+        """A custome implentation for what the string will print"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
