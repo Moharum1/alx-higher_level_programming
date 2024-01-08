@@ -2,6 +2,8 @@
 """
     A module with class MyList
 """
+
+
 class MyList(list):
     """
         A cusom list sub-class
