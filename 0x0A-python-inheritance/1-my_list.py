@@ -1,17 +1,11 @@
 #!/usr/bin/python3
 """
-    A cusom list sub-class
+    A module with class MyList
 """
 class MyList(list):
     """
         A cusom list sub-class
     """
-
-    def __init__(self):
-        """
-        A function that init the super class
-        """
-        super().__init__()
 
     def print_sorted(self):
         """
