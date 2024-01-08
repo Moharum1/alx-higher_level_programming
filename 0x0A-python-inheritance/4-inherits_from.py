@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-    A module with is_kind_of_class func
+    A module with inherits_from func
 """
 
 
 def inherits_from(obj, a_class):
     """
-        A function to check if the object is an instance of a class 
+        A function to check if the object is an instance of a class
             that inherited (directly or indirectly) from the specified class
 
         Arg:
