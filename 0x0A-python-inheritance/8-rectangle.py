@@ -25,3 +25,18 @@ class Rectangle(BaseGeometry):
     def area(self):
         """A function to print the area of the Geometry"""
         raise Exception("area() is not implemented")
+
+r = Rectangle(3, 5)
+
+print(r)
+print(dir(r))
+
+try:
+    print("Rectangle: {} - {}".format(r.width, r.height))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r2 = Rectangle(4, True)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
