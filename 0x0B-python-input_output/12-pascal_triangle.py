@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""A pascal triangle func"""
+
 
 def pascal_triangle(n):
     ''' Create a list of list representing pascal triangle '''
