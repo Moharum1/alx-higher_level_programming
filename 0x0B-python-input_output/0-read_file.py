@@ -10,4 +10,4 @@ def read_file(filename=""):
             filename (str): a string describing the location of a file
     """
     with open(filename, encoding="utf-8") as file:
-        print(file.read())
+        print(file.read(), end="")
