@@ -27,5 +27,5 @@ class Student:
         """
             A function that changes the value of args in obj
         """
-        for key, value in json:
-            self.__dict__[key] = value
+        for atribute in json:
+            self.__dict__[atribute] = atribute
