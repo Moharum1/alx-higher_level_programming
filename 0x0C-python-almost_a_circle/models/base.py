@@ -4,6 +4,7 @@ import json
 import os
 import csv
 
+
 class Base:
     """Base Class"""
 
@@ -37,11 +38,11 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
-        
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
-            A method to convert a list of Base obj into json format 
+            A method to convert a list of Base obj into json format
             and save it inot a json file
 
             args:
@@ -50,7 +51,7 @@ class Base:
         jsonlist = [obj.to_dictionary() for obj in list_objs]
 
         with open(f"{cls.__name__}.json", "w", encoding="utf-8") as file:
-            json.dump(jsonlist, file)
+            cls.to_json_string(jsonlist)
 
     @staticmethod
     def from_json_string(json_string):
@@ -60,22 +61,22 @@ class Base:
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
-        
+
     @classmethod
     def create(cls, **dictionary):
         """A method to create a class instance with the given attributes"""
         if cls.__name__ == "Rectangle":
-            instance = cls(10,10)
+            instance = cls(10, 10)
         else:
             instance = cls(10)
 
         instance.update(**dictionary)
         return instance
-    
+
     @classmethod
     def load_from_file(cls):
         """
-            A method that load the content of a file 
+            A method that load the content of a file
             and create a class instance using the file content
         """
         file_path = f"{cls.__name__}.json"
@@ -94,7 +95,7 @@ class Base:
             objs.append(cls.create(**item))
 
         return objs
-    
+
     @classmethod
     def load_from_file_csv(cls):
         """Save the content of a class instance into csv file"""
@@ -126,5 +127,4 @@ class Base:
         for index in range(len(matrix)):
             list_ins.append(cls.create(**matrix[index]))
 
-        return list_ins            
-
+        return list_ins
