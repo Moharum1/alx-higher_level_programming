@@ -22,7 +22,7 @@ class Square(Rectangle):
     def size(self):
         """Setter for size propert"""
         return self.width
-    
+
     @size.setter
     def size(self, val):
         """
@@ -44,7 +44,7 @@ class Square(Rectangle):
         str_wh = "{}".format(self.width)
 
         return str_square + str_id + str_xy + str_wh
-    
+
     def update(self, *args, **kwargs):
         """
             Update the Rectangle class according to the number of args
