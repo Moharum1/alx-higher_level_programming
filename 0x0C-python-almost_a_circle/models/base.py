@@ -48,10 +48,14 @@ class Base:
             args:
                 list_objs (Base list): list of obj you want to convert
         """
-        jsonlist = [obj.to_dictionary() for obj in list_objs]
+        jsonList  = []
+        for obj in list_objs:
+            jsonList.append(obj.to_dictionary())
+            print(obj.to_dictionary())
+
 
         with open(f"{cls.__name__}.json", "w", encoding="utf-8") as file:
-            cls.to_json_string(jsonlist)
+            cls.to_json_string(jsonList)
 
     @staticmethod
     def from_json_string(json_string):
