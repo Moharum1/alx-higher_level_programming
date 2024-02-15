@@ -1,7 +1,7 @@
 -- a Script that list all the elements with a state name California
-SELECT id, name FROM hbtn_0d_usa.cities
+SELECT id, name FROM cities
     WHERE state_id = (
-        SELECT id FROM hbtn_0d_usa.states
+        SELECT id FROM states
         WHERE name = "California"
     )
     ORDER BY id
