@@ -1,7 +1,6 @@
-#!/usr/bin/node
-const Rectangle = require('./2-rectangle');
+const Square = require('./5-square');
 
-const r1 = new Rectangle(3, -3);
-console.log(r1);
-console.log(r1.width);
-console.log(r1.height);
+const s1 = new Square(4);
+console.log(s1);
+console.log(s1.width);
+console.log(s1.height);
