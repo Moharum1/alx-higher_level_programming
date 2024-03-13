@@ -1,14 +1,7 @@
 #!/usr/bin/node
-const converter = require('./10-converter').converter;
+const Rectangle = require('./2-rectangle');
 
-let myConverter = converter(10);
-
-console.log(myConverter(2));
-console.log(myConverter(12));
-console.log(myConverter(89));
-
-myConverter = converter(16);
-
-console.log(myConverter(2));
-console.log(myConverter(12));
-console.log(myConverter(89));
+const r1 = new Rectangle(3, -3);
+console.log(r1);
+console.log(r1.width);
+console.log(r1.height);
