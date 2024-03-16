@@ -23,5 +23,5 @@ if __name__ == "__main__":
                 print(item.id)
                 found = True
 
-        if found is True:
+        if found is False:
             print("Not found")
