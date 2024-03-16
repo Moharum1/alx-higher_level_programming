@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS states (
 INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
 
 -- DATA ACCESS
-SELECT id, name FROM states WHERE name REGEXP '^N\w*'
+SELECT id, name FROM states if state[1][0] == 'N'

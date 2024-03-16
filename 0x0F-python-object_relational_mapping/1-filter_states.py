@@ -17,8 +17,9 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
 
-    cur.execute("SELECT id, name FROM states WHERE name REGEXP '^N\w*'")
+    cur.execute("SELECT id, name FROM states")
     data = cur.fetchall()
 
     for row in data:
-        print(row)
+        if row[1][0] == "N":
+            print(row)
