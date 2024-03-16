@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A simple use of MySQLdb to display data from db
 
-    Usage ./2-my_filter_states.py <mysql username> <mysql password> <db name> <state name>
+    Usage ./2-my_filter_states.py <mysql user> <mysql password> <db> <state>
 """
 import MySQLdb
 import sys
