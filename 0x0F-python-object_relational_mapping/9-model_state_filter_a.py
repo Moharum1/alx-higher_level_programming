@@ -14,9 +14,8 @@ if __name__ == "__main__":
 
     with Session(engin) as session:
         query = session.query(State)
-        state = query.first()
+        content = query.all()
         
-        if state is None:
-            print("Nothing")
-        else:
-            print("{}: {}".format(state.id, state.name))
+        for state in content:
+            if "a" in state.name:
+                print("{}: {}".format(state.id, state.name))
