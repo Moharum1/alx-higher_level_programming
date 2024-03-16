@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A simple use of MySQLdb to display data from db"""
 import MySQLdb
 import sys
 
