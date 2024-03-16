@@ -20,7 +20,7 @@ if __name__ == "__main__":
         found = False
         for item in content:
             if item.name == state:
-                print(item.name)
+                print(item.id)
                 found = True
 
         if found is True:
