@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A simple use of MySQLdb to display data from db
 
-    Usage ./0-select_states.py <mysql username> <mysql password> <db name>
+    Usage ./1-filter_states.py <mysql username> <mysql password> <db name>
 """
 import MySQLdb
 import sys
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
 
-    cur.execute(""" SELECT id, name FROM states""")
+    cur.execute("SELECT id, name FROM states WHERE name REGEXP '^N\w*'")
     data = cur.fetchall()
 
     for row in data:
