@@ -8,6 +8,7 @@ import sys
 
 if __name__ == "__main__":
     params = sys.argv
+    state = params[4]
     engin = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                           format(params[1], params[2], params[3]),
                           pool_pre_ping=True)
@@ -16,6 +17,11 @@ if __name__ == "__main__":
         query = session.query(State)
         content = query.all()
 
-        for state in content:
-            if "a" in state.name:
-                print("{}: {}".format(state.id, state.name))
+        found = False
+        for item in content:
+            if item.name == state:
+                print(item.name)
+                found = True
+
+        if found is True:
+            print("Not found")
