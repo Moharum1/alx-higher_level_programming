@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
         found = False
         for item in content:
-            if item.id == 2:
-                item.name = "New Mexico"
-                session.commit()
+            if "a" in item.name:
+                session.delete(item)
+        session.commit()
