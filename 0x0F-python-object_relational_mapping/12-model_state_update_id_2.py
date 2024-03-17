@@ -16,7 +16,6 @@ if __name__ == "__main__":
         query = session.query(State)
         content = query.all()
 
-        found = False
         for item in content:
             if item.id == 2:
                 item.name = "New Mexico"
